@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Stock Managment System</title>
+  </head>
+  <body class="container">
+    <div class="table-self">
+      <h2>Stock Levels</h2>
+      <table class="table">
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Price per Unit (R)</th>
+          <th>Total Price (R)</th>
+        </tr>
+        <tr>
+          <td>PRODUCT01</td>
+          <td id="quantityProduct1">7</td>
+          <td id="priceProduct1">7.25</td>
+          <td id="totalPriceProduct1">16</td>
+        </tr>
+        <tr>
+          <td>PRODUCT02</td>
+          <td id="quantityProduct2">10</td>
+          <td id="priceProduct2">5.50</td>
+          <td id="totalPriceProduct2">16,50</td>
+        </tr>
+        <tr>
+          <td>PRODUCT03</td>
+          <td id="quantityProduct3">9</td>
+          <td id="priceProduct3">10.99</td>
+          <td id="totalPriceProduct3">16.50</td>
+        </tr>
+      </table>
+    </div>
+    <h2>Add product</h2>
+    <form class="form-self form-add">
+      <div>
+        <label class="form-label" for="productRecieved">Select a Product</label>
+        <select class="form-select" name="productRecieved" id="productRecieved">
+          <option value="null">--Select--</option>
+          <option value="product1">PRODUCT01</option>
+          <option value="product2">PRODUCT02</option>
+          <option value="product3">PRODUCT03</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="itemsRecieved" class="form-label">Items Recieved</label>
+        <input
+          type="text"
+          class="form-control"
+          name="itemsRecieved"
+          id="itemsRecieved"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="pricePerItem" class="form-label"
+          >Price per item Recieved</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          name="pricePerItem"
+          id="pricePerItem"
+        />
+      </div>
+      <button type="submit" class="add-items btn btn-primary">Add Stock</button>
+    </form>
+    <h2>Remove product</h2>
+    <form class="form-self form-remove">
+      <div>
+        <label class="form-label" for="productSold">Select a Product</label>
+        <select class="form-select" name="productSold" id="productSold">
+          <option value="null">--Select--</option>
+          <option value="product1">PRODUCT01</option>
+          <option value="product2">PRODUCT02</option>
+          <option value="product3">PRODUCT03</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="itemsSold" class="form-label">Buyer Email</label>
+        <input
+          type="email"
+          class="form-control"
+          name="buyerEmail"
+          id="buyerEmail"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="itemsSold" class="form-label">Total Sold</label>
+        <input
+          type="text"
+          class="form-control"
+          name="itemsSold"
+          id="itemsSold"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Remove Stock</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
